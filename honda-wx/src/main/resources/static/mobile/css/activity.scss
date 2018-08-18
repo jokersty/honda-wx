@@ -1,0 +1,374 @@
+@function toRem($px) {
+  @return $px/(20*2)+rem
+}
+
+/*第三张图片需要缩放*/
+@function toChangeRem($px) {
+  @return $px/(20*2*1.563)+rem
+}
+
+.page1 {
+  background: url(../img/page1-bg.jpg) no-repeat center center;
+  background-size: cover;
+  .content {
+    width: 100%;
+    height: 100%;
+    .content-active {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .content-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: toRem(88);
+        padding: 0 toRem(30);
+        .content-header-logo {
+          width: toRem(193);
+          height: toRem(29);
+          background: url(../img/honda-logo.png) no-repeat center center;
+          background-size: cover;
+        }
+        .content-header-motto {
+          width: toRem(159);
+          height: toRem(35);
+          background: url(../img/honda-motto.png) no-repeat center center;
+          background-size: cover;
+        }
+      }
+      .content-text {
+        .content-text-title {
+          display: block;
+          width: toRem(465);
+          height: toRem(38);
+          margin: toRem(24) auto;
+        }
+        .content-text-theme {
+          display: block;
+          width: toRem(342);
+          height: toRem(234);
+          margin: toRem(28) auto 0 auto;
+        }
+        .content-text-number {
+          width: toRem(597);
+          height: toRem(126);
+          margin: 0 auto;
+          position: relative;
+          .text-number {
+            width: toRem(597);
+            height: toRem(126);
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          .text-number1 {
+            background: url(../img/200wtext.png) no-repeat 0 0;
+            background-size: cover;
+          }
+          .text-number2 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-126);
+            background-size: cover;
+          }
+          .text-number3 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-252);
+            background-size: cover;
+          }
+          .text-number4 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-378);
+            background-size: cover;
+          }
+          .text-number5 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-504);
+            background-size: cover;
+          }
+          .text-number6 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-630);
+            background-size: cover;
+          }
+          .text-number7 {
+            background: url(../img/200wtext.png) no-repeat 0 toRem(-756);
+            background-size: cover;
+          }
+        }
+        .content-text-kip {
+          text-align: center;
+          line-height: toRem(65);
+          font-size: toRem(26);
+          letter-spacing: toRem(32);
+          text-indent: toRem(32);
+        }
+      }
+      .page1-btn {
+        width: toRem(355);
+        height: toRem(232);
+        background: url(../img/pag1-btn.png) no-repeat center center;
+        background-size: toRem(355) toRem(232);
+        position: absolute;
+        bottom: toRem(112);
+        left: 50%;
+        margin-left: toRem(-177.5);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .content-bottom {
+        font-size: toRem(24);
+        letter-spacing: toRem(20);
+        text-indent: toRem(20);
+        position: absolute;
+        bottom: toRem(50);
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .content-headerImg {
+        position: absolute;
+        left: 50%;
+        margin-left: toRem(-63);
+        bottom: 11.2%;
+        width: toRem(126);
+        height: toRem(126);
+        border-radius: 50%;
+        border: toRem(4) solid #fff;
+      }
+      /*css3动画，试了没用,位置在不同的手机上是不一定的*/
+      //.headderImg-animate {
+      //  animation: toTop 1s linear;
+      //  -webkit-animation: toTop 1s linear;
+      //  bottom: auto;
+      //  top: toRem(48);
+      //}
+      //@keyframes toTop {
+      //  from {
+      //    bottom: toRem(165);
+      //    top: auto;
+      //  }
+      //  to {
+      //    bottom: auto;
+      //    top: toRem(48);
+      //  }
+      //}
+      //@-webkit-keyframes myfirst /* Safari 与 Chrome */
+      //{
+      //  from {
+      //    bottom: toRem(165);
+      //    top: auto;
+      //  }
+      //  to {
+      //    bottom: auto;
+      //    top: toRem(48);
+      //  }
+      //}
+      .content-par {
+        position: relative;
+        .content-info {
+          margin: 0 toRem(30);
+          height: toRem(686);
+          background: url(../img/blackboard.png) no-repeat center center;
+          background-size: cover;
+          position: relative;
+          .content-info-title {
+            line-height: toRem(70);
+            height: toRem(168);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: toRem(29);
+            color: #be9881;
+            padding-top: toRem(220);
+            span {
+              color: #585858
+            }
+          }
+          .content-info-text {
+            height: toRem(399);
+            background: url(../img/info-bg.png) no-repeat center center;
+            background-size: 100% toRem(399);
+            font-size: toRem(30);
+            color: #5f3420;
+            text-align: center;
+            position: absolute;
+            top: toRem(257);
+            left: toRem(16);
+            right: toRem(16);
+            font-weight: bold;
+            .text-time {
+              padding: toRem(70) 0 toRem(15) 0;
+              span {
+                font-size: toRem(37.4);
+              }
+            }
+            .text-honda {
+              width: toRem(596);
+              height: toRem(49);
+              margin: toRem(15) auto;
+            }
+            .text-days {
+              span {
+                font-size: toRem(39);
+                color: #ee3920;
+                //border-bottom: toRem(3) solid #ee3920;
+              }
+            }
+            .text-peer {
+              width: toRem(158);
+              height: toRem(144);
+              position: absolute;
+              top: toRem(-107);
+              left: toRem(-11);
+            }
+          }
+          .no-carowner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              display: block;
+              width: toRem(409);
+              height: toRem(280);
+            }
+          }
+        }
+        .content-motto {
+          text-align: center;
+          line-height: toRem(68);
+          font-size: toRem(26);
+          letter-spacing: toRem(32);
+          text-indent: toRem(32);
+        }
+      }
+      .content-car {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        bottom: toRem(400);
+        transform: translate(-50%, -50%);
+      }
+      .content-more {
+        position: absolute;
+        bottom: toRem(32);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        .content-more-up {
+          width: toRem(84);
+          height: toRem(44);
+        }
+        .content-more-text {
+          font-size: toRem(24);
+          letter-spacing: toRem(7);
+          text-indent: toRem(7);
+        }
+      }
+    }
+  }
+}
+
+.page3 {
+  background: url(../img/page3-bg.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+  .report {
+    position: absolute;
+    width: toChangeRem(1059);
+    height: toChangeRem(316);
+    bottom: toChangeRem(241);
+    left: 50%;
+    margin-left: toChangeRem(-529.5);
+  }
+  .btn {
+    position: absolute;
+    width: toChangeRem(220);
+    height: toChangeRem(182);
+    padding-top: toChangeRem(133);
+    bottom: toChangeRem(26);
+    left: 50%;
+    margin-left: toChangeRem(-110);
+    background: url(../img/btn.png) no-repeat center top;
+    background-size: toChangeRem(122) toChangeRem(123);
+    font-size: toRem(24);
+    text-align: center;
+    color: #fff;
+    letter-spacing: toChangeRem(7);
+    text-indent: toChangeRem(7);
+  }
+  .page3-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pageEnd {
+  background: url(../img/pageEnd-bg.jpg) no-repeat center center;
+  background-size: cover;
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: toRem(88);
+    padding: 0 toRem(30);
+    .content-header-logo {
+      width: toRem(193);
+      height: toRem(29);
+      background: url(../img/honda-logo.png) no-repeat center center;
+      background-size: cover;
+    }
+    .content-header-motto {
+      width: toRem(159);
+      height: toRem(35);
+      background: url(../img/honda-motto.png) no-repeat center center;
+      background-size: cover;
+    }
+  }
+  .content-safe {
+    padding-top: toRem(120);
+    text-align: center;
+    font-size: toRem(26);
+    letter-spacing: toRem(18);
+    text-indent: toRem(18);
+  }
+  .content-honda {
+    display: block;
+    width: toRem(596);
+    height: toRem(49);
+    margin: toRem(70) auto toRem(30) auto;
+  }
+  .content-gratitude {
+    display: block;
+    width: toRem(610);
+    height: toRem(72);
+    margin: 0 auto;
+  }
+  .luck-draw {
+    width: toRem(452);
+    height: toRem(97);
+    background: url(../img/btn-red.png) no-repeat center center;
+    background-size: toRem(452) toRem(97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: toRem(28);
+    position: absolute;
+    bottom: toRem(218);
+    left: 50%;
+    margin-left: toRem(-226);
+  }
+  .watch-again {
+    width: toRem(452);
+    height: toRem(97);
+    background: url(../img/btn-yellow.png) no-repeat center center;
+    background-size: toRem(452) toRem(97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: toRem(28);
+    position: absolute;
+    bottom: toRem(93);
+    left: 50%;
+    margin-left: toRem(-226);
+  }
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x5-orientation" content="portrait">
+    <title>200W车主活动</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/1.1.3/weui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+</head>
+<body>
+<script>
+    (function () {
+        var e = null
+        window.onresize = function () {
+            clearTimeout(e), e = setTimeout(f, 300)
+        }, f()
+
+        function f() {
+            var cw = document.documentElement.clientWidth > 414 ? 414 : document.documentElement.clientWidth
+            document.querySelector("html").style.fontSize = cw / 18.75 + "px"
+        }
+    })(window)
+</script>
+<div class="container swiper-container" id="container">
+    <div class="swiper-wrapper" style="display: block;">
+        <!--第一页，第二页-->
+        <div class="page page1 swiper-slide" id="page1" style="opacity: 0;">
+            <div class="content">
+                <div class="content-active">
+                    <!--第一页-->
+                    <div class="content-header">
+                        <div class="content-header-logo"></div>
+                        <div class="content-header-motto"></div>
+                    </div>
+                    <div class="content-text" id="page1ContentText">
+                        <img class="content-text-title" src="img/honda-title.png" alt="东方honda售后服务"/>
+                        <img class="content-text-theme" src="img/200w-theme.png" alt="注册车主突破两百万"/>
+                        <div class="content-text-number" id="textNumber">
+                            <div class="text-number text-number1" style="opacity: 0;"></div>
+                            <div class="text-number text-number2" style="opacity: 0;"></div>
+                            <div class="text-number text-number3" style="opacity: 0;"></div>
+                            <div class="text-number text-number4" style="opacity: 0;"></div>
+                            <div class="text-number text-number5" style="opacity: 0;"></div>
+                            <div class="text-number text-number6" style="opacity: 0;"></div>
+                            <div class="text-number text-number7" style="opacity: 0;"></div>
+                        </div>
+                        <div class="content-text-kip">感恩有您·同心同行</div>
+                    </div>
+                    <div class="page1-btn" id="page1Btn" style="display: none;"></div>
+                    <div class="content-bottom" id="page1ContentBottom">一键启动，一路同行</div>
+                    <!--第二页-->
+                    <div class="content-par">
+                        <div class="content-info" id="contentInfo" style="display: none;opacity: 0;">
+                            <div class="content-info-title" id="contentInfoTitle" style="display: none;">
+                                亲爱的<span>海纳百川</span></div>
+                            <div class="content-info-text" id="contentInfoText" style="display: none;">
+                                <div class="text-time" id="textTime" style="display: none;">
+                                    <span>2017</span>年<span>3</span>月<span>15</span>日
+                                </div>
+                                <div class="text-cong" id="textCong" style="display: none;">您成功注册为认证车主</div>
+                                <img class="text-honda" id="textHonda" style="display: none;"
+                                     src="img/honda-cong-title.png"
+                                     alt="东方honda售后服务"/>
+                                <div class="text-days" id="textDays" style="display: none;">已陪伴您<span>165</span>天</div>
+                                <img class="text-peer" id="textPeer" style="display: none;" src="img/peer.png"
+                                     alt="同行人"/>
+                            </div>
+                            <!--非车主-->
+                            <div class="content-info-text no-carowner" id="noCarOwner" style="display: none;">
+                                <img src="img/peerLarge.png" alt="同行人">
+                            </div>
+                        </div>
+                        <div class="content-motto" id="contentMotto" style="display: none;">服务之道，同心同行</div>
+                    </div>
+                    <img class="content-headerImg" id="headerImg" style="display: none"/>
+                    <img class="content-car" id="car" src="img/car.png"/>
+                    <div class="content-more" id="more" style="display: none;">
+                        <img src="img/up.png" class="content-more-up">
+                        <div class="content-more-text">向上滑动</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--第三页-->
+        <div class="page swiper-slide swiper-no-swiping page3" id="page3">
+            <img src="img/report.png" alt="成长同行" class="report" style="display: none;">
+            <canvas width="750" height="1206" class="page3-canvas" id="page3Cvs" style="opacity: 0"></canvas>
+            <canvas width="750" height="1206" class="page3-canvas" id="page4Cvs" style="opacity: 0"></canvas>
+            <div class="btn" id="btn" style="opacity: 0">
+                长按观看
+            </div>
+        </div>
+    </div>
+    <!--最后一页-->
+    <div class="page pageEnd" id="pageEnd" style="display: none;">
+        <div class="content-header">
+            <div class="content-header-logo"></div>
+            <div class="content-header-motto"></div>
+        </div>
+        <div class="content-safe">一路同心同行，只为让您安心</div>
+        <img class="content-honda"
+             src="img/honda-cong-title.png"
+             alt="东方honda售后服务"/>
+        <img class="content-gratitude" src="img/gratitude.png" alt="感恩">
+        <div class="luck-draw">开启幸运转盘</div>
+        <div class="watch-again" id="watchAgain">再 次 观 看</div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/activity.js"></script>
+</body>
+</html>
